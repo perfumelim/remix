@@ -3,6 +3,8 @@ type Post = {
   title: string;
 };
 
+// test git config
+
 export async function getPosts(): Promise<Array<Post>> {
   return [
     {
