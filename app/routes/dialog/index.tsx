@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useRef } from "react";
 
 function Dialog() {
+  const dialogRef = useRef<HTMLDialogElement>(null);
+
   const clickOpenModal = () => {
-    const favDialog = document.getElementById("favDialog");
-    favDialog.showModal();
+    const favDialog = dialogRef.current;
+    if (dialogRef.current) {
+        dialogRef.current.showModal();
+    }
   };
   return (
     <div>
@@ -19,6 +23,7 @@ function Dialog() {
         </button>
       </main>
       <dialog
+        ref={dialogRef}
         id="favDialog"
         className="rounded-md p-16 backdrop:bg-pink-200 backdrop:bg-opacity-50"
       >
