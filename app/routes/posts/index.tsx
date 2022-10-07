@@ -16,8 +16,8 @@ export default function Posts() {
   const { posts } = useLoaderData() as LoaderData;
 
   return (
-    <main>
-      <h1>Posts</h1>
+    <main className="flex flex-col items-center bg-whiteish pt-16">
+      <h1 className="text-4xl">Posts</h1>
       <Link to="admin" className="text-red-600 underline">
         Admin
       </Link>

@@ -8,6 +8,11 @@ module.exports = {
         darkgrey: "#3d3d3f",
         limegreen: "#7dce94",
         whiteish: "#f9f8fd",
+        customGreen: {
+          200: "#9DC88D",
+          400: "#4D774E",
+          600: "#164A41",
+        },
       },
     },
   },
