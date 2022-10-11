@@ -5,27 +5,23 @@ import { useOptionalUser } from "~/utils";
 export default function Index() {
   const user = useOptionalUser();
   return (
-    <main className="relative min-h-screen bg-white sm:flex sm:items-center sm:justify-center">
+    <main className="relative min-h-screen bg-white bg-green-paint sm:flex sm:items-center sm:justify-center">
       <div className="relative sm:pb-16 sm:pt-8">
         <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="relative shadow-xl sm:overflow-hidden sm:rounded-2xl">
             <div className="absolute inset-0">
-              <img
-                className="h-full w-full object-cover"
-                src="https://images.unsplash.com/photo-1585483051403-1c902c941a29?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
-                alt="Sonic Youth On Stage"
-              />
-              <div className="absolute inset-0 bg-[color:rgba(254,204,27,0.5)] mix-blend-multiply" />
+              <div className="absolute inset-0 bg-[color:rgba(24,69,59,0.5)] mix-blend-multiply" />
             </div>
             <div className="relative px-4 pt-16 pb-8 sm:px-6 sm:pt-24 sm:pb-14 lg:px-8 lg:pb-20 lg:pt-32">
-              <h1 className="text-center text-4xl font-extrabold tracking-tight sm:text-8xl lg:text-9xl">
+              <h1 className="text-center text-2xl font-extrabold tracking-tight sm:text-5xl lg:text-7xl">
                 <span className="block uppercase text-whiteish drop-shadow-md">
-                  Perfume's log
+                  Endless Forms
+                  <br />
+                  Most Beautiful
                 </span>
               </h1>
               <p className="mx-auto mt-6 max-w-lg text-center text-xl text-white sm:max-w-3xl">
-                Check the README.md file for instructions on how to get this
-                project deployed.
+                AND MOST WONDERFUL have been, and are being evolved.
               </p>
               <div className="mx-auto mt-10 max-w-sm sm:flex sm:max-w-none sm:justify-center">
                 {user ? (
@@ -52,24 +48,14 @@ export default function Index() {
                   </div>
                 )}
               </div>
-              <a href="https://remix.run">
-                <img
-                  src="https://user-images.githubusercontent.com/1500684/158298926-e45dafff-3544-4b69-96d6-d3bcc33fc76a.svg"
-                  alt="Remix"
-                  className="mx-auto mt-16 w-full max-w-[12rem] md:max-w-[16rem]"
-                />
-              </a>
+              <Link
+                to="/posts"
+                className=" btn border-none bg-customGreen-600 text-whiteish"
+              >
+                Blog Posts
+              </Link>
             </div>
           </div>
-        </div>
-
-        <div className="mx-auto mt-16 max-w-7xl text-center">
-          <Link
-            to="/posts"
-            className=" btn border-none bg-customGreen-600 text-whiteish"
-          >
-            Blog Posts
-          </Link>
         </div>
       </div>
     </main>
