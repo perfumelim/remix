@@ -7,6 +7,20 @@ export default function Index() {
   return (
     <main className="relative min-h-screen bg-white bg-green-paint sm:flex sm:items-center sm:justify-center">
       <div className="relative sm:pb-16 sm:pt-8">
+        <div className="navbar bg-customGreen-600">
+          <div className="flex-1">
+            <Link to="/" className="btn btn-ghost text-xl normal-case">
+              Perfume's log
+            </Link>
+          </div>
+          <div className="flex-none">
+            <ul className="menu menu-horizontal p-0">
+              <li>
+                <Link to="/posts">Blog Posts</Link>
+              </li>
+            </ul>
+          </div>
+        </div>
         <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="relative shadow-xl sm:overflow-hidden sm:rounded-2xl">
             <div className="absolute inset-0">
@@ -48,12 +62,6 @@ export default function Index() {
                   </div>
                 )}
               </div>
-              <Link
-                to="/posts"
-                className=" btn border-none bg-customGreen-600 text-whiteish"
-              >
-                Blog Posts
-              </Link>
             </div>
           </div>
         </div>
