@@ -18,13 +18,13 @@ export default function Posts() {
   return (
     <main className="flex h-screen w-screen flex-col items-center bg-whiteish pt-16">
       <h1 className="text-4xl">Posts</h1>
-      <Link to="admin" className="text-red-600 underline">
+      <Link to="admin" className="text-red-600">
         Admin
       </Link>
       <ul>
         {posts.map((post) => (
           <li key={post.slug}>
-            <Link to={post.slug} className="text-blue-600 underline">
+            <Link to={post.slug} className="text-customGreen-600">
               {post.title}
             </Link>
           </li>
